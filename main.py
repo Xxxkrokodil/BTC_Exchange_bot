@@ -14,12 +14,12 @@ def cancel_handler(update, context):
                  InlineKeyboardButton('Обратная связь', callback_data='option_5')],
                 [InlineKeyboardButton('Поддержка / Оператор', url="https://t.me/")],
                 [InlineKeyboardButton('Отзывы', url="https://t.me/")],
-                [InlineKeyboardButton('Новостной канал', url="https://t.me/btcmonopoly")],
+                [InlineKeyboardButton('Новостной канал', url="https://t.me/")],
                 [InlineKeyboardButton('Продать биткоин', callback_data='option_9')],
                 [InlineKeyboardButton('Мои заказы', callback_data='orders')],
                 [InlineKeyboardButton('Правила', callback_data='option_10')],
-                [InlineKeyboardButton('⚡ BTC Mixer', url="https://t.me/BTC_MONOPOLY_MIXER_BOT")],
-                [InlineKeyboardButton('📱Надежный VPN', url="https://t.me/YouFast_vpn_bot")]]
+                [InlineKeyboardButton('⚡ BTC Mixer', url="https://t.me/")],
+                [InlineKeyboardButton('📱Надежный VPN', url="https://t.me/")]]
     reply_markup = InlineKeyboardMarkup(keyboard)
     update.message.reply_text(
         "✌️ Бот обменник! Тут можно обменять свои RUB на BTC. ✌️\n\n Если ты 'новичок' и хочешь получить промокод на скидку? - пиши мне \n\n Жми кнопку '👉 Купить Биткоин 👈' или просто введи сумму в RUB или BTC\n \nПример: 0.001 или 0,001",
@@ -34,7 +34,7 @@ def main_menu(update, context):
                 InlineKeyboardButton('Обратная связь', callback_data='option_5')],
                  [InlineKeyboardButton('Поддержка / Оператор',  url="https://t.me/")],
                 [InlineKeyboardButton('Отзывы', url="https://t.me/BTC_MonopolyComments")],
-                 [InlineKeyboardButton('Новостной канал', url="https://t.me/btcmonopoly")],
+                 [InlineKeyboardButton('Новостной канал', url="https://t.me/")],
                 [InlineKeyboardButton('Продать биткоин', callback_data='option_9')],
                  [InlineKeyboardButton('Мои заказы', callback_data='orders')],
                 [InlineKeyboardButton('Правила', callback_data='option_10')],
@@ -185,7 +185,7 @@ def button(update, context):
         return telegram.Update.DEFAULT
 
     elif data == "option_5":
-        text = "Контакты поддержки:  \n\nНаш канал с отзывами: @BTC_MonopolyComments\n\n Новости нашего обменника, а также промокоды, акции и конкурсы в нашем официальном канале:@BTCMonopoly "
+        text = "Контакты поддержки:  \n\nНаш канал с отзывами: @BTC_MonopolyComments\n\n Новости нашего обменника, а также промокоды, акции и конкурсы в нашем официальном канале:@ "
     elif data == "option_10":
         text = "1. Запрещается использование услуг обменника для незаконных переводов и мошеннических действий. Клиент обязуется предоставлять все документы, удостоверяющие его личность, в случае подозрения о мошенничестве и/или отмывании денег.\n\n"
         text += "2. Администрация обменника имеет право отказать в заключении сделки и выполнении заявки, причем без объяснения причин. Данный пункт применяется по отношению к любому клиенту.\n\n"
